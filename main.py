@@ -17,3 +17,5 @@ dhtPub = dhtMqttPublisher.pub(host,"temperature")
 threading.Thread(target=termo.run).start()
 threading.Thread(target=tempSet.run).start()
 threading.Thread(target=dhtPub.run).start()
+
+print("Tessdf")
