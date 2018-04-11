@@ -4,8 +4,7 @@ import paho.mqtt.publish as publish
 import time
 
 class pub:
-	host = ""
-	topic = ""
+	
 	def __init__(self,host,topic):
 		self.host = host
 		self.topic = topic		

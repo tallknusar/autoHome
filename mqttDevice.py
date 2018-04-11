@@ -12,7 +12,7 @@ class Device:
 		self.host = host
 		self.plug = plug
 		self.status = ("%s" %self.plug.state)
-		print("Made new mqtt device")
+		
 
 	def plugOn(self):
 			plug.turn_on()

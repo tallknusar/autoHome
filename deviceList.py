@@ -11,7 +11,6 @@ import paho.mqtt.publish as publish
 
 class devList:
 	deviceList = []
-	host = ""
 	def __init__(self,host):
 		self.host = host
 		for dev in Discover.discover().values():
