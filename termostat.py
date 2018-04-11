@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+#Denne har eg endra på.
 from pyHS100 import SmartPlug
 import dht
 import time
@@ -25,21 +26,21 @@ class Termostat():
 		on = None
 		while(True):
 
-			
-			if (dht.getTemperature() < self.setpoint  and on != True):
-				status.publish("localhost",str(on) + str(dht.getTemperature()))
+			testTemp = dhat.getTemperature()
+			if (testTemp < self.setpoint  and on != True):
+				status.publish("localhost",str(on) + str(testTemp))
 				self.deviceList.getObject("VarmeKjokken").turn_on()
 				self.deviceList.getObject("VarmeStue").turn_on()
 				print("Heat On!")
 				status.publish("localhost","Heat ON! " +
-				 '{0:0.1f}'.format(dht.getTemperature()) + "C")
+				 '{0:0.1f}'.format(testTemp) + "C")
 				on = True
 
-			elif(dht.getTemperature() > self.setpoint +1 and on != False):
-				status.publish("localhost",str(on) + str(dht.getTemperature()))
+			elif(testTemp > self.setpoint +1 and on != False):
+				status.publish("localhost",str(on) + str(testTemp))
 				self.deviceList.getObject("VarmeKjokken").turn_off()
 				self.deviceList.getObject("VarmeStue").turn_off()
 				status.publish("localhost",("Heat OFF! "
-				 + '{0:0.1f}'.format(dht.getTemperature())+ "C" ))
+				 + '{0:0.1f}'.format(testTemp)+ "C" ))
 				print("Heat Off!")
 				on = False
