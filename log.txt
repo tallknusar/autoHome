@@ -67,3 +67,5 @@
 11/04-18|10:19:04 -  Heat ON! 19.4C
 11/04-18|10:49:48 -  True20.100000381469727
 11/04-18|10:49:49 -  Heat OFF! 20.3C
+11/04-18|21:23:27 -  Made new subscriber
+11/04-18|21:23:28 -  Subscribed to : temperature/set

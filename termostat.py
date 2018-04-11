@@ -26,7 +26,7 @@ class Termostat():
 		on = None
 		while(True):
 
-			testTemp = dhat.getTemperature()
+			testTemp = dht.getTemperature()
 			if (testTemp < self.setpoint  and on != True):
 				status.publish("localhost",str(on) + str(testTemp))
 				self.deviceList.getObject("VarmeKjokken").turn_on()
