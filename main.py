@@ -12,7 +12,7 @@ from pyfiglet import Figlet
 f = Figlet(font='slant')
 print (f.renderText('autoHOME'))
 
-host = "localhost"
+host = "192.168.1.1"
 devices = deviceList.devList(host)
 termo = termostat.Termostat(devices)
 tempSet = mqttSub.subscribe(host,"temperature/set",termo)

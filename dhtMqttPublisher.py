@@ -12,5 +12,5 @@ class pub:
 	def run(self):
 		while(True):
 			publish.single(self.topic, '{0:0.1f}'.format(dht.getTemperature()), hostname=self.host)
-			#print ('{0:0.1f}'.format(dht.getTemperature()))
+			print ('{0:0.1f}'.format(dht.getTemperature()))
 			time.sleep(5)

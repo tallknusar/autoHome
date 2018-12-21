@@ -17,8 +17,8 @@ class devList:
     
 			self.deviceList.append(mqttDevice.Device(self.host,dev))
 
-		print("Made new device with " +str(len(self.deviceList)) + " devices")	
-		#status.publish("localhost","status",("Made new list with " +str(len(self.deviceList)) + " devices"))
+		print("Made new device list with " +str(len(self.deviceList)) + " devices")	
+		
 		
 #Tar inn navn på device(String), sammeligner med navn i listen og returnerer mqttDevice objektet
 #TODO: bytte for loop
